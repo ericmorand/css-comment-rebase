@@ -10,6 +10,8 @@ class Rebaser extends Transform {
 
     super(options);
 
+    this.base = options.base || null;
+
     this.regionRegex = /^(?:\s)line(?:\s)(?:\S+),(?:\s)(\S+)(?:\s)$/;
   }
 
@@ -76,6 +78,10 @@ class Rebaser extends Transform {
 
           if (!url.host && !path.isAbsolute(contentNodeContent)) {
             contentNode.content = path.join(path.dirname(nodeRegion.path), unquote(contentNode.content));
+
+            if (self.base) {
+              contentNode.content = path.relative(self.base, contentNode.content);
+            }
 
             self.emit('rebase', contentNode.content);
           }
