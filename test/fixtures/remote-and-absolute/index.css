@@ -1,0 +1,12 @@
+/* line 2, foo/index.scss */
+.foo {
+    background: url('/foo/bar');
+}
+
+.bar {
+    background: url('//foo/bar');
+}
+
+.foo-bar {
+    background: url('http://foo/bar');
+}
