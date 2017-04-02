@@ -1,6 +1,6 @@
 {
   "name": "css-comment-rebase",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Rebase your CSS assets based on node-sass source comments.",
   "main": "src/index.js",
   "directories": {
