@@ -36,6 +36,12 @@ To:
 
 Return an object transform stream `rebaser` that expects entry filenames.
 
+Optionally pass in some opts:
+
+* opts.base:
+  
+  The path the assets should be rebased _relatively_ to. Defaults to `null`.
+
 ## Events
 
 In addition to the usual events emitted by node.js streams, css-comment-rebase emits the following events:
